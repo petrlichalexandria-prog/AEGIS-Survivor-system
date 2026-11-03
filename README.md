@@ -1,106 +1,96 @@
 # AEGIS (Autonomous Evidentiary Grounding & Incident System)
 
-Encrypted, offline-first survivor documentation platform and high-conflict incident logger.
+> **Current Status:** Architectural Proposal & Concept Specification  
+> **Repository Purpose:** System design, JSON data schema, and open-source proposal. *Not a compiled or audited production mobile app.*
 
-## Architecture Blueprint
+AEGIS is an open-source, survivor-designed architectural framework for high-conflict incident logging and evidence organization across domestic, workplace, child protection, and institutional abuse environments[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span).
+
+---
+
+## 1. Project Overview & Scope
+
+AEGIS bridges the gap between daily high-conflict situations and official legal/advocacy review. The goal of this architecture is to help self-represented individuals convert chaotic, emotionally charged experiences into structured, objective, time-stamped documentation.
+
+* **What is defined in this repository:** Complete JSON system schema, incident categorization taxonomy, and behavioral extraction guidelines[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).
+* **What requires development & review:** Compiled mobile app software container (iOS/Android), OS-level hardware trigger integration, client-side encryption key management, and security/privacy audits[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span).
+
+---
+
+## 2. Architecture Blueprint & Data Schema
 
 ```json
 {
-  "project_name": "AEGIS (Autonomous Evidentiary Grounding & Incident System)",
-  "version": "1.0.0-OS",
-  "license": "MIT (Open Source Non-Profit Collaboration)",
-  "description": "Encrypted, offline-first survivor documentation platform and high-conflict incident logger.",
-  "architecture": {
-    "platform": "Progressive Web App (PWA) / Cross-Platform Mobile (React Native / Flutter)",
-    "storage_model": "Local-First Encrypted Database (SQLite / IndexedDB with AES-256-GCM)",
-    "security_layer": "Zero-Knowledge Encryption, Biometric Lock, PIN Decryption, Steganographic Camouflage Mode"
-  },
-  "core_modules": [
-    {
-      "module_id": "MOD-01",
-      "name": "Local Vault & Encrypted Database",
-      "features": [
-        "AES-256-GCM client-side encryption before disk write.",
-        "Zero-cloud sync option to prevent remote subpoena or compromise.",
-        "EXIF metadata preservation for photo/video integrity (timestamp, location).",
-        "Export engine generating timestamped, read-only PDF reports with cryptographic checksums (SHA-256) for legal/court readiness."
-      ]
+  "AEGIS (Autonomous Evidentiary Grounding & Incident System)": {
+    "version": "0.1.0",
+    "type": "Open-Source Non-Profit Collaboration Proposal",
+    "description": "Encrypted, offline-first survivor documentation platform and high-conflict incident logger specification.",
+    "architecture_targets": {
+      "frontend": "Progressive Web App (PWA) / Cross-Platform Mobile (React Native / Flutter)",
+      "database": "Local-First Encrypted Database (SQLite / IndexedDB with AES-256-GCM)",
+      "security_goals": "Planned Client-Side Encryption, Biometric Lock, PIN Decryption, Steganographic UX"
     },
-    {
-      "module_id": "MOD-02",
-      "name": "High-Conflict Acoustic & Sensor Trigger",
-      "features": [
-        "Background audio level monitoring (dB threshold detection for elevated voices).",
-        "Hardware shortcut triggers (volume button sequence, triple-shake activation).",
-        "Immediate auto-save of short audio buffers into the encrypted vault without opening UI."
-      ]
+    "proposed_modules": {
+      "MOD-01": {
+        "name": "Vault & Encrypted Database Specification",
+        "features": [
+          "Client-side encryption prior to disk write",
+          "No forced cloud sync to mitigate remote subpoena or account compromise risks",
+          "EXIF metadata preservation for media (timestamps, geolocation tags)",
+          "Structured export formats intended for legal and advocate review (with SHA-256 integrity verification)"
+        ]
+      },
+      "MOD-02": {
+        "name": "Conflict Acoustic & Sensor Trigger Concept",
+        "features": [
+          "Audio level monitoring (dB threshold detection for elevated voices)",
+          "Hardware shortcuts (volume button sequence, motion/shake activation)",
+          "Auto-buffering short audio clips into local encrypted vault"
+        ]
+      },
+      "MOD-03": {
+        "name": "Discreet UX & Safety Safeguards",
+        "features": [
+          "Optional utility icon disguise (e.g., standard calculator or utility tool)",
+          "Duress panic PIN concept (entering a designated PIN presents a clean workspace while keeping real data locked)"
+        ]
+      },
+      "MOD-04": {
+        "name": "Incident Cataloging & Categorization Schema",
+        "categories": [
+          "Aggression / Escalation",
+          "Environmental / Safety Hazards",
+          "Custody & Exchange Volatility",
+          "Financial / Coercive Control",
+          "Psychological Boundary Violations",
+          "Co-parenting Communication Interference"
+        ]
+      }
     },
-    {
-      "module_id": "MOD-03",
-      "name": "Camouflage & Stealth Mode",
-      "features": [
-        "Disguised application icon and fake user interface (e.g., standard calculator or utility app).",
-        "Duress PIN system (entering a designated panic PIN presents a clean, empty workspace while keeping real data locked)."
-      ]
-    },
-    {
-      "module_id": "MOD-04",
-      "name": "Incident Cataloging & Categorization Schema",
-      "categories": [
-        "Physical Aggression / Escalation",
-        "Unsecured Firearms / Safety Hazards",
-        "Child Welfare & Custody Exchange Volatility",
-        "Unattended Vehicle / Environmental Neglect",
-        "Verbal / Psychological Coercion & Boundary Violations",
-        "Property & Routine Interference (e.g., Footwear, Belongings)"
-      ]
-    }
-  ],
-  "data_schema_template": {
-    "incident_record": {
-      "incident_id": "UUID-v4",
-      "timestamp_utc": "ISO-8601",
-      "severity_level": "LOW | MEDIUM | HIGH_ALERT_RED_FLAG",
-      "category": "STRING",
-      "child_disclosures": [
-        {
-          "child_name": "STRING",
-          "disclosure_text": "STRING",
-          "witnessed_by": "STRING",
-          "external_reporting": "THERAPIST | SCHOOL_COUNSELOR | NONE"
-        }
-      ],
-      "factual_summary": "STRING",
-      "media_attachments": [
-        {
-          "file_type": "AUDIO | IMAGE | DOCUMENT",
-          "file_hash_sha256": "STRING",
-          "encrypted_path": "STRING"
-        }
-      ],
+    "incident_entry_schema": {
+      "incident_id": "UUID v4",
+      "timestamp": "ISO-8601",
+      "severity_level": "LOW | MEDIUM | HIGH ALERT RED FLAG",
+      "category_tag": "STRING",
+      "observed_behaviors": ["STRING"],
+      "factual_summary": {
+        "objective_events": "STRING",
+        "direct_quotes_or_text": "STRING",
+        "impact_on_minors": "STRING",
+        "third_party_reporting": "THERAPIST | SCHOOL COUNSELOR | PEDIATRICIAN | LEGAL | NONE"
+      },
+      "attached_media_refs": ["STRING"],
+      "media_metadata": {
+        "file_type": "AUDIO | IMAGE | DOCUMENT",
+        "hash_sha256": "STRING",
+        "exif_provenance": "STRING"
+      },
       "third_party_notifications": [
         {
-          "contact_role": "THERAPIST | COUNSELOR | PEDIATRICIAN | LEGAL",
-          "date_sent": "ISO-8601",
+          "recipient_type": "THERAPIST | COUNSELOR | PEDIATRICIAN | LEGAL",
+          "notification_id": "ISO-8601",
           "confirmation_status": "BOOLEAN"
         }
       ]
     }
   }
 }
-
-
-
-## Development Roadmap & Technical Scope
-
-### Phase 1: Evidentiary Logic & Data Schema (Current Architecture)
-* **Open-Source System Schema:** Standardized JSON architecture for logging incident categories, third-party witness references, and behavioral patterns[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span).
-* **Court-Ready Formatting Engine:** Objective data extraction logic designed to strip emotional noise and generate factual, concise timelines with cryptographic checksums (SHA-256)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span).
-* **Universal Application:** Built to handle domestic, workplace, child protection, and institutional abuse environments[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span).
-
-### Phase 2: Native Mobile Software Container (In Development / Seeking Collaborators)
-* **Client-Side Zero-Knowledge Vault:** Local-first database (SQLite/IndexedDB) utilizing AES-256-GCM encryption with no mandatory cloud sync[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span).
-* **Hardware & Sensor Triggers:** OS-specific background triggers (Android volume sequences/shake sensors; iOS Action Button/Shortcuts) for rapid buffer recording[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span).
-* **Stealth & Duress Safeguards:** Steganographic UI camouflage (disguised interface) with dual-PIN vault decryption (Panic PIN presents empty workspace)[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span).
-* **Legal & Consent Compliance:** Built-in jurisdictional disclaimers and single-party vs. multi-party recording consent toggles.
-
