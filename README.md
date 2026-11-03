@@ -1,6 +1,10 @@
-# AEGIS-Survivor-system
+# AEGIS (Autonomous Evidentiary Grounding & Incident System)
 
+Encrypted, offline-first survivor documentation platform and high-conflict incident logger.
 
+## Architecture Blueprint
+
+```json
 {
   "project_name": "AEGIS (Autonomous Evidentiary Grounding & Incident System)",
   "version": "1.0.0-OS",
