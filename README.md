@@ -88,3 +88,19 @@ Encrypted, offline-first survivor documentation platform and high-conflict incid
     }
   }
 }
+
+
+
+## Development Roadmap & Technical Scope
+
+### Phase 1: Evidentiary Logic & Data Schema (Current Architecture)
+* **Open-Source System Schema:** Standardized JSON architecture for logging incident categories, third-party witness references, and behavioral patterns[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span).
+* **Court-Ready Formatting Engine:** Objective data extraction logic designed to strip emotional noise and generate factual, concise timelines with cryptographic checksums (SHA-256)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span).
+* **Universal Application:** Built to handle domestic, workplace, child protection, and institutional abuse environments[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span).
+
+### Phase 2: Native Mobile Software Container (In Development / Seeking Collaborators)
+* **Client-Side Zero-Knowledge Vault:** Local-first database (SQLite/IndexedDB) utilizing AES-256-GCM encryption with no mandatory cloud sync[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span).
+* **Hardware & Sensor Triggers:** OS-specific background triggers (Android volume sequences/shake sensors; iOS Action Button/Shortcuts) for rapid buffer recording[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span).
+* **Stealth & Duress Safeguards:** Steganographic UI camouflage (disguised interface) with dual-PIN vault decryption (Panic PIN presents empty workspace)[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span).
+* **Legal & Consent Compliance:** Built-in jurisdictional disclaimers and single-party vs. multi-party recording consent toggles.
+
