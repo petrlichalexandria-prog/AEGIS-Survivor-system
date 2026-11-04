@@ -63,7 +63,25 @@ AEGIS bridges the gap between daily high-conflict situations and official legal/
           "Financial / Coercive Control",
           "Psychological Boundary Violations",
           "Co-parenting Communication Interference"
+            ]
+      },
+      "MOD-05": {
+        "name": "Trauma-Informed Sensory Memory Mapping",
+        "features": [
+          "Non-linear sensory prompting (lighting, weather, ambient sounds, clothing anchors)",
+          "External contextual anchor-linking (cross-referencing calendar/weather history to establish precise timestamps)",
+          "Spatial zone categorization for incident location framing"
         ]
+      },
+      "MOD-06": {
+        "name": "Nervous System Pacing & Grounding Guardrails",
+        "features": [
+          "Real-time stress pattern detection (frantic typing speed, high emotional density)",
+          "Automatic silent draft-saving with gentle pause prompts",
+          "Micro-grounding physical resets (sip of cold water, shoulder drop, jaw unclench, 30-second sensory focal shift)"
+        ]
+      }
+    },
       }
     },
     "incident_entry_schema": {
